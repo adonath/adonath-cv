@@ -20,6 +20,8 @@
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
+\usepackage{multicol}
+
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -71,6 +73,19 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+\centering\textcolor{color1}{\rule{16cm}{1pt}}
+
+\begin{multicols}{2}
+\begin{itemize}
+\item I am a Postdoc researcher at the Max Planck Institue for Nuclear Physics in Heidelberg, where I research in the field of Gamma-Ray astromomy
+\item I am interested in the Galactic gamma-ray source population, especially catalog production
+\item I am interested in open source software development for astronomical data analysis, including Gammapy, Astropy.
+\item I am interested in open source software development for astronomical data analysis, including Gammapy, Astropy.
+\end{itemize}
+\end{multicols}
+
+\centering\textcolor{color1}{\rule{16cm}{1pt}}
+
 \section{\textbf{Education}}
 \cventry{\textbf{Phd} \\ \textcolor{gray}{2014 - 2018}}{}{Department of Physics and Astronomy}{University of Heidelberg}{Thesis: \textit{The Galactic Gamma-ray source Population between 10~GeV and 50~TeV}, advised by W.Hofmann}{}  % Arguments not required can be left empty
 \cventry{\textbf{M.Sc.} \\ \textcolor{gray}{2011 - 2014}}{}{Department of Physics and Astronomy}{University of Heidelberg}{Thesis: \textit{Towards the H.E.S.S. Galactic Plane Survey Catalog}, advised by W.Hofmann}{}  % Arguments not required can be left empty
@@ -82,21 +97,20 @@
 
 \subsection{Employment}
 %------------------------------------------------
-\cvitem{\textbf{MPIK} \\ \textcolor{gray}{2018--present}}{Postdoc at the Max-Planck-Institut for Nuclear Physics, Heidelberg}
-\cvitem{\textbf{MPIK} \\ \textcolor{gray}{2014--2018}}{PhD Student at the Max-Planck-Institut for Nuclear Physics, Heidelberg}
-\cvitem{\textbf{HCI} \\ \textcolor{gray}{2012--2014}}{Student assistent at the Heidelberg Collaboratory for Image Processing (HCI)}
+\cvitem{\textbf{MPIK} \\ \textcolor{gray}{2018--present}}{Postdoctoral researcher, non-thermal astrophysics, Max-Planck-Institut for Nuclear Physics, Heidelberg. Supervised by Jim Hinton}
+\cvitem{\textbf{MPIK} \\ \textcolor{gray}{2014--2018}}{PhD Student, high energy astrophysics, Max-Planck-Institut for Nuclear Physics, Heidelberg. Supervised by Werner Hofmann}
+\cvitem{\textbf{HCI} \\ \textcolor{gray}{2012--2014}}{Student assistent, Heidelberg Collaboratory for Image Processing (HCI), Heidelberg. Supervised by Bernd Jähne.}
 \cvitem{\textbf{Halle02} \\ \textcolor{gray}{2006--2007}}{Voluntary year in culture at \textit{Atelier Kontrast}, Heidelberg}
 %------------------------------------------------
 
-\subsection{Teaching}
-\cvitem{\textbf{ASTERICS-OBELICS School} \\ \textcolor{gray}{June 2017}}{\textit{Astropy}, 1st ASTERICS-OBELICS International School}
+\subsection{Formal Teaching}
 \cvitem{Spring 2016}{Tutor for \textit{Python programming for scientists}, University of Heidelberg}
 \cvitem{Fall 2015}{Tutor for \textit{Python programming for scientists}, University of Heidelberg}
 \cvitem{Autumn 2009}{\textit{Basiskurs Schl\"usselkompetenzen}, University of  Heidelberg}
 
 \subsection{Service}
-\cvitem{\textbf{PyGamma19} \\ \textcolor{gray}{2019}}{Member of the local organsition committe for the Python in Gamma-Ray astronomy conference}
-\cvitem{\textbf{PyGamma15} \\ \textcolor{gray}{2015}}{Member of the local organsition committe for the Python in Gamma-Ray astronomy conference}
+\cvitem{\textbf{PyGamma19} \\ \textcolor{gray}{2019}}{Member of the SoC and LoC for the 1st Python in Gamma-Ray Astronomy Conference}
+\cvitem{\textbf{PyGamma15} \\ \textcolor{gray}{2015}}{Member of the SoC and LoC for the 2nd Python in Gamma-Ray Astronomy Conference}
 \cvitem{\textbf{Gammapy} \\ \textcolor{gray}{2015-present}}{Organisation of mutiple Gammapy coding sprints (~3 per year) and Gammapy developer calls}
 
 \subsection{Mentoring}
@@ -131,12 +145,17 @@
 \subsection{Astronomy}
 \cvitem{\textbf{Gamma} \\ \textcolor{gray}{June 2016}}{The H.E.S.S. Galactic Plane Survey}
 \cvitem{\textbf{TeVPa} \\ \textcolor{gray}{June 2016}}{The H.E.S.S. Galactic Plane Survey}
-\cvitem{H.E.S.S.}{The H.E.S.S. Galactic Plane Survey}
+\cvitem{\textbf{H.E.S.S.}\\ \textcolor{gray}{2014-2018}}{Various presentations on the H.E.S.S. Galactic Plane Survey for the H.E.S.S. collaboration}
 
+
+** Invited tutorials
 \subsection{Software}
 \cvitem{\textbf{Herbsttagung DAG} \\ \textcolor{gray}{Autumn 2014}}{Astropy - A community developed core package for Astronomy in Python}
 \cvitem{\textbf{PyGamma15} \\ \textcolor{gray}{November 2015}}{An overview of Astropy, Sherpa and Gammapy}
 \cvitem{\textbf{PyGamma19} \\ \textcolor{gray}{March 2019}}{Gammapy - A Python Package for Gamma-Ray Astronomy}
+\cvitem{\textbf{**Asterics-Obelics} \\ \textcolor{gray}{2017, 2018, 2019}}{\textit{Astropy} tutorial, 1st ASTERICS-OBELICS International School}
+\cvitem{\textbf{**Sexten} \\ \textcolor{gray}{June 2019}}{\textit{Gammapy} tutorial, Multimessenger Data Analysis in the CTA era Summer School, Sexten}
+
 \cvitem{\textbf{CTA / H.E.S.S.} \\ \textcolor{gray}{2014 -- present}}{Various Gammapy talks and tutorials at
 H.E.S.S and CTA collaboration meetings}
 
