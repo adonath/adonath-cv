@@ -62,6 +62,14 @@
 %   to redefine the bibliography heading string ("Publications")
 %\renewcommand{\refname}{Articles}
 
+\usepackage{datetime}
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+
+
+\cfoot{\textcolor{gray}{Updated \monthyeardate\today}}
+
 % bibliography with mutiple entries
 %\usepackage{multibib}
 %\newcites{book,misc}{{Books},{Others}}
@@ -78,9 +86,11 @@
 \begin{multicols}{2}
 \begin{itemize}
 \item I am a Postdoc researcher at the Max Planck Institue for Nuclear Physics in Heidelberg, where I research in the field of Gamma-Ray astromomy
-\item I am interested in the Galactic gamma-ray source population, especially catalog production
-\item I am interested in open source software development for astronomical data analysis, including Gammapy, Astropy.
-\item I am interested in open source software development for astronomical data analysis, including Gammapy, Astropy.
+\item I am interested in the global structure of the Milky-Way in GeV-TeV gamma-rays, mostly in the context of catalog production. This includes to understand the Galactic gamma-ray source population together with interstellar diffuse gamma-ray emission.   
+\item My second interest is combining data joint analyses from multiple gamma-ray instruments, including
+IACT, satellite as well as data from water Cherenkov observatories. Advanced data analysis methods, such as
+combined spectro-morphological modelling.
+\item I am interested in open source software development for astronomical data analysis. Currently I am the lead developer of the Gammapy package and conbtributed to Astropy and photutils in the past.
 \end{itemize}
 \end{multicols}
 
@@ -97,21 +107,22 @@
 
 \subsection{Employment}
 %------------------------------------------------
-\cvitem{\textbf{MPIK} \\ \textcolor{gray}{2018--present}}{Postdoctoral researcher, non-thermal astrophysics, Max-Planck-Institut for Nuclear Physics, Heidelberg. Supervised by Jim Hinton}
-\cvitem{\textbf{MPIK} \\ \textcolor{gray}{2014--2018}}{PhD Student, high energy astrophysics, Max-Planck-Institut for Nuclear Physics, Heidelberg. Supervised by Werner Hofmann}
-\cvitem{\textbf{HCI} \\ \textcolor{gray}{2012--2014}}{Student assistent, Heidelberg Collaboratory for Image Processing (HCI), Heidelberg. Supervised by Bernd Jähne.}
+\cvitem{\textbf{MPIK} \\ \textcolor{gray}{2018--present}}{Postdoctoral researcher, non-thermal astrophysics, Max-Planck-Institut for Nuclear Physics (MPIK), Heidelberg. Supervised by Jim Hinton}
+\cvitem{\textbf{MPIK} \\ \textcolor{gray}{2014--2018}}{PhD student, high energy astrophysics, Max-Planck-Institut for Nuclear Physics (MPIK), Heidelberg. Supervised by Werner Hofmann}
+\cvitem{\textbf{HCI} \\ \textcolor{gray}{2012--2014}}{Student assistent, computer vision, Heidelberg Collaboratory for Image Processing (HCI), Heidelberg. Supervised by Bernd Jähne.}
 \cvitem{\textbf{Halle02} \\ \textcolor{gray}{2006--2007}}{Voluntary year in culture at \textit{Atelier Kontrast}, Heidelberg}
 %------------------------------------------------
 
 \subsection{Formal Teaching}
-\cvitem{Spring 2016}{Tutor for \textit{Python programming for scientists}, University of Heidelberg}
-\cvitem{Fall 2015}{Tutor for \textit{Python programming for scientists}, University of Heidelberg}
-\cvitem{Autumn 2009}{\textit{Basiskurs Schl\"usselkompetenzen}, University of  Heidelberg}
+\cvitem{\textbf{Python} \\ \textcolor{gray}{Spring 2016}}{Tutor for \textit{Python programming for scientists}, lectured by Thomas Robitaille, University of Heidelberg}
+\cvitem{\textbf{Python} \\ \textcolor{gray}{Fall 2015}}{Tutor for \textit{Python programming for scientists},
+lectured by Thomas Robitaille, University of Heidelberg}
+\cvitem{\textbf{Soft skills} \\ \textcolor{gray}{Autumn 2009}}{Tutor for \textit{Basiskurs Schl\"usselkompetenzen},   ,University of  Heidelberg}
 
 \subsection{Service}
 \cvitem{\textbf{PyGamma19} \\ \textcolor{gray}{2019}}{Member of the SoC and LoC for the 1st Python in Gamma-Ray Astronomy Conference}
 \cvitem{\textbf{PyGamma15} \\ \textcolor{gray}{2015}}{Member of the SoC and LoC for the 2nd Python in Gamma-Ray Astronomy Conference}
-\cvitem{\textbf{Gammapy} \\ \textcolor{gray}{2015-present}}{Organisation of mutiple Gammapy coding sprints (~3 per year) and Gammapy developer calls}
+\cvitem{\textbf{Gammapy} \\ \textcolor{gray}{2015-present}}{Organisation of mutiple Gammapy coding sprints ($\approx 3$ per year) and weekly Gammapy developer calls}
 
 \subsection{Mentoring}
 \cvitem{\textbf{GSoC} \\ \textcolor{gray}{Summer 2015}}{Mentoring of Google Summer of Code student Patty Carroll for Astropy}
