@@ -1,6 +1,6 @@
 TARGET=adonath-cv
 LATEX=pdflatex
-BIBTEX=bibtex
+BIBTEX=biber
 
 all: $(TARGET).pdf
 

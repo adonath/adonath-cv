@@ -21,6 +21,12 @@
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
 \usepackage{multicol}
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=ydnt
+]{biblatex}
+\addbibresource{adonath-cv.bib}
 
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
@@ -154,21 +160,22 @@ lectured by Thomas Robitaille, University of Heidelberg}
 
 \section{\textbf{Talks}}
 \subsection{Astronomy}
-\cvitem{\textbf{Gamma} \\ \textcolor{gray}{June 2016}}{The H.E.S.S. Galactic Plane Survey}
-\cvitem{\textbf{TeVPa} \\ \textcolor{gray}{June 2016}}{The H.E.S.S. Galactic Plane Survey}
-\cvitem{\textbf{H.E.S.S.}\\ \textcolor{gray}{2014-2018}}{Various presentations on the H.E.S.S. Galactic Plane Survey for the H.E.S.S. collaboration}
+\cvitem{\textbf{Gamma} \\ \textcolor{gray}{June 2016}}{The H.E.S.S. Galactic Plane Survey, 6th International Symposium on High-Energy Gamma-Ray Astronomy, Heidelberg}
+\cvitem{\textbf{TeVPa} \\ \textcolor{gray}{June 2016}}{The H.E.S.S. Galactic Plane Survey, TeV Particle Astrophysics, Geneva}
+\cvitem{\textbf{H.E.S.S.}\\ \textcolor{gray}{2014-2018}}{Various presentations on the H.E.S.S. Galactic Plane Survey at H.E.S.S. collaboration meetings, Warsaw, Heidelberg and Paris}
 
 
-** Invited tutorials
 \subsection{Software}
-\cvitem{\textbf{Herbsttagung DAG} \\ \textcolor{gray}{Autumn 2014}}{Astropy - A community developed core package for Astronomy in Python}
-\cvitem{\textbf{PyGamma15} \\ \textcolor{gray}{November 2015}}{An overview of Astropy, Sherpa and Gammapy}
-\cvitem{\textbf{PyGamma19} \\ \textcolor{gray}{March 2019}}{Gammapy - A Python Package for Gamma-Ray Astronomy}
-\cvitem{\textbf{**Asterics-Obelics} \\ \textcolor{gray}{2017, 2018, 2019}}{\textit{Astropy} tutorial, 1st ASTERICS-OBELICS International School}
+\raggedright ** Invited talks / tutorials
+\cvitem{\textbf{DAG} \\ \textcolor{gray}{Autumn 2014}}{Astropy - A community developed core package for Astronomy in Python, German Astronomical Society (DAG), Bamberg}
+\cvitem{\textbf{PyGamma15} \\ \textcolor{gray}{Nov. 2015}}{An overview of Astropy, Sherpa and Gammapy, Python in Gamma Ray Astronomy Conference, Heidelberg}
+\cvitem{\textbf{PyGamma19} \\ \textcolor{gray}{March 2019}}{Gammapy - A Python Package for Gamma-Ray Astronomy, Python in Gamma Ray Astronomy Conference, Heidelberg}
+\cvitem{\textbf{CTA / H.E.S.S.} \\ \textcolor{gray}{2014 -- 2019}}{Various Gammapy talks and tutorials at
+H.E.S.S and CTA collaboration meetings, Annecy, Bologna and Lugano}
+\cvitem{\textbf{**Sexten} \\ \textcolor{gray}{June 2021}}{\textit{Gammapy} tutorial, Multimessenger Data Analysis in the CTA era Summer School, Dortmund}
+\cvitem{\textbf{**HAWC} \\ \textcolor{gray}{June 2020}}{\textit{Gammapy} tutorial, Multimessenger Data Analysis in the CTA era Summer School, Remote}
 \cvitem{\textbf{**Sexten} \\ \textcolor{gray}{June 2019}}{\textit{Gammapy} tutorial, Multimessenger Data Analysis in the CTA era Summer School, Sexten}
-
-\cvitem{\textbf{CTA / H.E.S.S.} \\ \textcolor{gray}{2014 -- present}}{Various Gammapy talks and tutorials at
-H.E.S.S and CTA collaboration meetings}
+\cvitem{\textbf{**Asterics-Obelics} \\ \textcolor{gray}{2017, 2018 and 2019}}{\textit{Astropy} tutorial, 1st ASTERICS-OBELICS International School, Annecy}
 
 
 %\section{Skill matrix}
@@ -228,8 +235,11 @@ H.E.S.S and CTA collaboration meetings}
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
 \nocite{*}
-\bibliographystyle{plain}
-\bibliography{adonath-cv}                        % 'publications' is the name of a BibTeX file
+%\bibliographystyle{plain}
+%\bibliography{adonath-cv}                        % 'publications' is the name of a BibTeX file
+\printbibliography[title={Publications and Proceedings}]
+%\printbibliography[type=, title={Proceedings}, heading=subbibliography]
+
 
 % Publications from a BibTeX file using the multibib package
 %\section{Publications}
