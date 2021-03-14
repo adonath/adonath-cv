@@ -132,6 +132,9 @@
   \RequirePackage[unicode]{hyperref}% unicode is required for unicode pdf metadata
   \hypersetup{
     breaklinks,
+    colorlinks = true,
+    linkcolor=color2,
+    urlcolor=color1,
     baseurl       = http://,
     pdfborder     = 0 0 0,
     pdfpagemode   = \pdfpagemode,
