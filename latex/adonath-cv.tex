@@ -28,6 +28,8 @@ sorting=ydnt
 ]{biblatex}
 \addbibresource{adonath-cv.bib}
 
+%\usepackage{enumitem}
+
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -69,6 +71,7 @@ sorting=ydnt
 %\renewcommand{\refname}{Articles}
 
 \usepackage{datetime}
+\usepackage{amssymb}
 
 \newdateformat{monthyeardate}{%
   \monthname[\THEMONTH], \THEYEAR}
@@ -87,27 +90,25 @@ sorting=ydnt
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
-\centering\textcolor{color1}{\rule{16cm}{1pt}}
+\centering\textcolor{color1}{\rule{\textwidth}{1pt}}
+\vspace*{-11pt}\includegraphics[width=\textwidth]{galactic-plane}
+\centering\textcolor{color1}{\rule{\textwidth}{1pt}}
 
 \begin{multicols}{2}
 \begin{itemize}
-\item I am a Postdoc researcher at the Max Planck Institue for Nuclear Physics in Heidelberg, where I research in the field of Gamma-Ray astromomy
-\item I am interested in the global structure of the Milky-Way in GeV-TeV gamma-rays, mostly in the context of catalog production. This includes to understand the Galactic gamma-ray source population together with interstellar diffuse gamma-ray emission.   
-\item My second interest is combining data joint analyses from multiple gamma-ray instruments, including
-IACT, satellite as well as data from water Cherenkov observatories. Advanced data analysis methods, such as
-combined spectro-morphological modelling.
-\item I am interested in open source software development for astronomical data analysis. Currently I am the lead developer of the Gammapy package and conbtributed to Astropy and photutils in the past.
+\item[\small\textcolor{color1}{$\blacksquare$}] I am a Postdoc researcher at the Max Planck Institute for Nuclear Physics in Heidelberg, where I research in the field of gamma-gay astromomy.
+\item[\small\textcolor{color1}{$\blacksquare$}] I am interested in the global structure of the Milky-Way in GeV-TeV gamma-rays and the Galactic gamma-ray source population. This includes association and classification of TeV gamma-ray sources in context of source catalog production as well as separation of sources from interstellar diffuse gamma-ray emission.   
+\item[\small\textcolor{color1}{$\blacksquare$}] My second interest is in advanced data analysis methods for counts based data with low statistics. This includes maximum likelihood based spectro morphological modelling of gamma-ray data, with handling of time and spatially dependent instrument response and combining data from multiple gamma-ray instruments. 
+\item[\small\textcolor{color1}{$\blacksquare$}] I am also interested in open source software development for astronomical data analysis and reproducible, open science.
 \end{itemize}
 \end{multicols}
 
-\centering\textcolor{color1}{\rule{16cm}{1pt}}
+\centering\textcolor{color1}{\rule{\textwidth}{1pt}}
 
 \section{\textbf{Education}}
 \cventry{\textbf{Phd} \\ \textcolor{gray}{2014 - 2018}}{Department of Physics and Astronomy}{Thesis: \textit{The Galactic Gamma-ray source Population between 10~GeV and 50~TeV}, advised by Werner Hofmann}{University of Heidelberg}{}{}  % Arguments not required can be left empty
 \cventry{\textbf{M.Sc.} \\ \textcolor{gray}{2011 - 2014}}{Department of Physics and Astronomy}{Thesis: \textit{Towards the H.E.S.S. Galactic Plane Survey Catalog}, advised by Werner Hofmann}{University of Heidelberg}{}{}  % Arguments not required can be left empty
 \cventry{\textbf{B.Sc.} \\ \textcolor{gray}{2007 - 2011}}{Department of Physics and Astronomy}{Specialized in Astronomy and Image Processing}{University of Heidelberg}{}{}
-
-
 
 \section{\textbf{Experience}}
 
@@ -119,6 +120,7 @@ combined spectro-morphological modelling.
 \cvitem{\textbf{Halle02} \\ \textcolor{gray}{2006--2007}}{Voluntary year in culture at \textit{Atelier Kontrast}, Heidelberg}
 %------------------------------------------------
 
+\pagebreak
 \subsection{Formal Teaching}
 \cvitem{\textbf{Python} \\ \textcolor{gray}{Spring 2016}}{Tutor for \textit{Python programming for scientists}, lectured by Thomas Robitaille, University of Heidelberg}
 \cvitem{\textbf{Python} \\ \textcolor{gray}{Fall 2015}}{Tutor for \textit{Python programming for scientists},
@@ -170,16 +172,16 @@ lectured by Thomas Robitaille, University of Heidelberg}
 
 
 \subsection{Software}
-\cvitem{}{** Invited talks / tutorials}
+\cvitem{}{\textcolor{gray}{* Invited talks / tutorials}}
 \cvitem{\textbf{DAG} \\ \textcolor{gray}{Autumn 2014}}{\textit{Astropy - A community developed core package for Astronomy in Python}, German Astronomical Society (DAG), Bamberg}
 \cvitem{\textbf{PyGamma15} \\ \textcolor{gray}{Nov. 2015}}{\textit{An overview of Astropy, Sherpa and Gammapy}, Python in Gamma Ray Astronomy Conference, Heidelberg}
 \cvitem{\textbf{PyGamma19} \\ \textcolor{gray}{March 2019}}{\textit{Gammapy - A Python Package for Gamma-Ray Astronomy}, Python in Gamma Ray Astronomy Conference, Heidelberg}
-\cvitem{\textbf{CTA / H.E.S.S.} \\ \textcolor{gray}{2014 -- 2019}}{Various Gammapy talks and tutorials at
+\cvitem{\textbf{CTA/H.E.S.S.} \\ \textcolor{gray}{2014 -- 2019}}{Various Gammapy talks and tutorials at
 H.E.S.S and CTA collaboration meetings, Annecy, Bologna and Lugano}
-\cvitem{\textbf{**TU Dortmund} \\ \textcolor{gray}{January 2021}}{\textit{Gammapy analysis methods and package}, Astroparticle Group Dortmund, Virtual}
-\cvitem{\textbf{**HAWC} \\ \textcolor{gray}{June 2020}}{Gammapy analysis of public HAWC Crab data, HAWC technical meeting, Virtual}
-\cvitem{\textbf{**Sexten} \\ \textcolor{gray}{June 2019}}{\textit{Gammapy} tutorial, Multimessenger Data Analysis in the CTA era Summer School, Sexten}
-\cvitem{\textbf{**Asterics-Obelics} \\ \textcolor{gray}{2017, 2018 and 2019}}{Astropy tutorial, 1st, 2nd and 3rd ASTERICS-OBELICS International School, Annecy}
+\cvitem{\textbf{*TU~Dortmund} \\ \textcolor{gray}{January 2021}}{\textit{Gammapy analysis methods and package}, Astroparticle Group Dortmund, Virtual}
+\cvitem{\textbf{*HAWC} \\ \textcolor{gray}{June 2020}}{Gammapy analysis of public HAWC Crab data, HAWC technical meeting, Virtual}
+\cvitem{\textbf{*Sexten} \\ \textcolor{gray}{June 2019}}{\textit{Gammapy} tutorial, Multimessenger Data Analysis in the CTA era Summer School, Sexten}
+\cvitem{\textbf{*Asterics-Obelics} \\ \textcolor{gray}{2017--2019}}{Astropy tutorial, 1st, 2nd and 3rd ASTERICS-OBELICS International School, Annecy}
 
 
 % \section{Skill matrix}
@@ -239,6 +241,7 @@ H.E.S.S and CTA collaboration meetings, Annecy, Bologna and Lugano}
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
 \nocite{*}
+\pagebreak
 %\bibliographystyle{plain}
 %\bibliography{adonath-cv}                        % 'publications' is the name of a BibTeX file
 \printbibliography[title={Publications and Proceedings}]
