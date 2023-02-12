@@ -25,10 +25,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install TeXlive
-        run: sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super texlive-bibtex-extra biber
+        run: sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super texlive-bibtex-extra biber texlive-fonts-extra
       - name: LaTeX compile
         working-directory: ${{ env.DIR }}
-        run: latexmk -pdflatex=lualatex -pdf -bibtex ${{ env.FILE }}
+        run: latexmk -xelatex -pdf -bibtex ${{ env.FILE }}
       - name: move
         run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
       - name: Upload pdf as artifact
