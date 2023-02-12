@@ -12,7 +12,7 @@
 
 # To compile multiple papers, duplicate the job called "paper" with different FILE/DIR names and add the "needs" line in the "deploy" job accordingly  
 
-name: compile_deploy_latex
+name: Compile and Deploy CV
 on: [push]
 jobs:
   paper:
@@ -28,7 +28,7 @@ jobs:
         run: sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super texlive-bibtex-extra biber
       - name: LaTeX compile
         working-directory: ${{ env.DIR }}
-        run: latexmk -pdf -bibtex ${{ env.FILE }}
+        run: latexmk -pdflatex=lualatex -pdf -bibtex ${{ env.FILE }}
       - name: move
         run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
       - name: Upload pdf as artifact
