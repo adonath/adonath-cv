@@ -18,6 +18,9 @@
 %\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
+\usepackage{fontspec}
+\setmainfont{Avenir Next}
+
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
 \usepackage{multicol}
@@ -26,6 +29,7 @@ backend=biber,
 style=numeric,
 sorting=ydnt
 ]{biblatex}
+
 \addbibresource{adonath-cv.bib}
 
 %\usepackage{enumitem}
@@ -45,7 +49,7 @@ sorting=ydnt
 %\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
 
 % Social icons
-%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+\social[linkedin]{https://linkedin.com/in/axeldonath}                        % optional, remove / comment the line if not wanted
 %\social[xing]{john\_doe}                           % optional, remove / comment the line if not wanted
 %\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 \social[github]{adonath}                              % optional, remove / comment the line if not wanted
@@ -96,7 +100,7 @@ sorting=ydnt
 
 \begin{multicols}{2}
 \begin{itemize}
-\item[\small\textcolor{color1}{$\blacksquare$}] I am a Postdoc researcher at the Center for Astrophysics Harvard \& Smithsonian in Cambridge MA, where I research in the field of X-ray and gamma-gay astromomy.
+\item[\small\textcolor{color1}{$\blacksquare$}] I am a Postdoc researcher at the Center for Astrophysics Harvard \& Smithsonian in Cambridge MA, where I research in the field of X-ray and gamma-ray astromomy.
 \item[\small\textcolor{color1}{$\blacksquare$}] I am interested in the global structure of the Milky-Way in GeV-TeV gamma-rays and the Galactic gamma-ray source population. This includes association and classification of TeV gamma-ray sources in context of source catalog production as well as separation of sources from interstellar diffuse gamma-ray emission.   
 \item[\small\textcolor{color1}{$\blacksquare$}] My second interest is in advanced data analysis methods for counts based data with low statistics. This includes maximum likelihood based spectro morphological modelling of gamma-ray data, with handling of time and spatially dependent instrument response and combining data from multiple gamma-ray instruments. 
 \item[\small\textcolor{color1}{$\blacksquare$}] I am also interested in open source software development for astronomical data analysis and reproducible, open science.
@@ -131,6 +135,8 @@ lectured by Thomas Robitaille, University of Heidelberg}
 \cvitem{\textbf{PyGamma19} \\ \textcolor{gray}{2019}}{Member of the SoC and LoC for the 1st Python in Gamma-Ray Astronomy conference}
 \cvitem{\textbf{PyGamma15} \\ \textcolor{gray}{2015}}{Member of the SoC and LoC for the 2nd Python in Gamma-Ray Astronomy conference}
 \cvitem{\textbf{Gammapy} \\ \textcolor{gray}{2015-present}}{Organisation of mutiple Gammapy coding sprints (approx. 3 per year) and weekly Gammapy developer calls}
+\cvitem{\textbf{JOSS} \\ \textcolor{gray}{August 2022-present}}{I am editor for the astronomy and astrophysics track of the Journal of Open Source Software}
+
 
 \subsection{Mentoring}
 \cvitem{\textbf{GSoC} \\ \textcolor{gray}{Summer 2015}}{Mentoring of Google Summer of Code project by Patti Carroll \textit{Astropy: Efficient and Precise Model Rasterization}.}
