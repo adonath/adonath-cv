@@ -12,10 +12,11 @@
 
 # To compile multiple papers, duplicate the job called "paper" with different FILE/DIR names and add the "needs" line in the "deploy" job accordingly  
 
-name: Compile and Deploy CV
-on: [push]
+name: 'Build LaTex Document'
+on:
+  push:
 jobs:
-  paper:
+  build:
     runs-on: ubuntu-latest
     env:
       # Edit here with the names of your latex file and directory (can use ".")
@@ -23,35 +24,17 @@ jobs:
       FILE: adonath-cv
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Install TeXlive
-        run: sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super texlive-bibtex-extra biber texlive-fonts-extra
-      - name: LaTeX compile
+        uses: actions/checkout@v3
+      - uses: wtfjoke/setup-tectonic@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run Tectonic
         working-directory: ${{ env.DIR }}
-        run: latexmk -xelatex -pdf -bibtex ${{ env.FILE }}
-      - name: move
+        run: tectonic ${{ env.FILE }}.tex
+      - name: Move file
         run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
       - name: Upload pdf as artifact
         uses: actions/upload-artifact@v2
         with:
           name: ${{ env.FILE }}.pdf
           path: ./github_artifacts
-  deploy:
-    # Edit here if compiling multiple papers
-    needs: [paper]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - uses: actions/download-artifact@v2
-        with:
-          path: github_artifacts
-      - name: move
-        run: mkdir -p github_deploy && mv github_artifacts/*/* github_deploy
-      - name: deploy on orphan branch
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./github_deploy
-          publish_branch: build
-          force_orphan: true
