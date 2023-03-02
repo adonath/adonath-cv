@@ -1,3 +1,2 @@
 # My curriculum vitae
-
-See also https://axeldonath.com
+Dowload PDF [here](https://github.com/adonath/adonath-cv/raw/build/adonath-cv.pdf), checkout also [my webpage](https://axeldonath.com).
